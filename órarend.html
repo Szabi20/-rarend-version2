@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="órarend.css">
+    <script src="orarend.js"></script>
+    <title>Document</title>
+</head>
+<body>
+   
+   
+    <h1>Stream órarend</h1>
+    <button onclick="myFunction()">Toggle dark mode</button>
+    <div id="ido">
+        
+        <div><p id="demo"></p></div>
+        <div><p id="demo2"></p></div>
+        <div><p id="demo3"></p></div>
+        <div><p id="demo4"></p></div>
+        <div><p id="demo5"></p></div>
+        <div><p id="demo6"></p></div>
+        <div><p id="demo7"></p></div>
+        <div><p id="demo8"></p></div>
+    </div>
+    <div id="het">
+        <p class="nap" id="reggel"></p>
+        <p class="nap" id="reggel2"></p>
+        <p class="nap" id="reggel3"></p>
+        <p class="nap" id="reggel4"></p>
+        <p class="nap" id="reggel5"></p>
+        <p class="vege" id="reggel6"></p>
+        <p class="vege" id="reggel7"></p>
+        
+    </div>
+    <table id="tabla">
+        <tr>
+            <td class="orak" ></td>
+            <td class="orak" ></td>
+            <td class="orak" ></td>
+            <td class="orak" ></td>
+            <td class="orak"></td>
+            <td class="orak"></td>
+            <td class="orak"></td>
+            <td class="orak"></td>
+        </tr>
+        <tr>
+            <td class="orak2">----</td>
+            <td class="orak2">----</td>
+            <td class="orak2"></td>
+            <td class="orak2"></td>
+            <td class="orak2"></td>
+            <td class="orak2"></td>
+            <td class="orak2"></td>
+            <td class="orak2"></td>
+        </tr>
+        <tr>
+            <td class="orak3">LOL</td>
+            <td class="orak3">LOL</td>
+            <td class="orak3">----</td>
+            <td class="orak3">----</td>
+            <td class="orak3">LOL</td>
+            <td class="orak3">LOL</td>
+            <td class="orak3">LOL</td>
+            <td class="orak3">LOL</td>
+        </tr>
+        <tr>
+            <td class="orak4">----</td>
+            <td class="orak4">----</td>
+            <td class="orak4">----</td>
+            <td class="orak4">----</td>
+            <td class="orak4">PUBG</td>
+            <td class="orak4">PUBG</td>
+            <td class="orak4">PUBG</td>
+            <td class="orak4">PUBG</td>
+        </tr>
+        <tr>
+            <td class="orak5">----</td>
+            <td class="orak5">----</td>
+            <td class="orak5">----</td>
+            <td class="orak5">----</td>
+            <td class="orak5">----</td>
+            <td class="orak5">Fortnite</td>
+            <td class="orak5">Fortnite</td>
+            <td class="orak5">Fortnite</td>
+        </tr>
+        <tr>
+            <td class="sunet">----</td>
+            <td class="sunet">----</td>
+            <td class="sunet">----</td>
+            <td class="sunet">----</td>
+            <td class="sunet">----</td>
+            <td class="sunet">----</td>
+            <td class="sunet">----</td>
+            <td class="sunet">----</td>
+            
+        </tr>
+        <tr>
+            <td class="sunet2">----</td>
+            <td class="sunet2">----</td>
+            <td class="sunet2">----</td>
+            <td class="sunet2">----</td>
+            <td class="sunet2">----</td>
+            <td class="sunet2">----</td>
+            <td class="sunet2">----</td>
+            <td class="sunet2">----</td>
+        </tr>
+    </table>
+
+    <script>
+        
+        const age = {nyolc:"8:00", kilenc:"9:00", tiz:"10:00",tizenegy:"11:00",tizenketo:"12:00",tizenharom:"13:00",tizennegy:"14:00",tizenot:"15:00"};
+
+        // Display some data from the object:
+        document.getElementById("demo").innerHTML = "" + age.nyolc;
+        document.getElementById("demo2").innerHTML = "" + age.kilenc;
+        document.getElementById("demo3").innerHTML = "" + age.tiz;
+        document.getElementById("demo4").innerHTML = "" + age.tizenegy;
+        document.getElementById("demo5").innerHTML = "" + age.tizenketo;
+        document.getElementById("demo6").innerHTML = "" + age.tizenharom;
+        document.getElementById("demo7").innerHTML = "" + age.tizennegy;
+        document.getElementById("demo8").innerHTML = "" + age.tizenot;
+
+        const napok={h:"Hétfö",k:"Kedd",sz:"Szerda",cs:"Csütörtök",p:"Péntek",szo:"Szombat",v:"Vasárnap"}
+        document.getElementById("reggel").innerHTML = "" + napok.h;
+        document.getElementById("reggel2").innerHTML = "" + napok.k;
+        document.getElementById("reggel3").innerHTML = "" + napok.sz;
+        document.getElementById("reggel4").innerHTML = "" + napok.cs;
+        document.getElementById("reggel5").innerHTML = "" + napok.p;
+        document.getElementById("reggel6").innerHTML = "" + napok.szo;
+        document.getElementById("reggel7").innerHTML = "" + napok.v;
+
+        const live={mc:"",gta:"GTA V",lol:"LOL",pub:"PUBG",forti:"Fortnite",zzz:"----"}
+        document.getElementById("streams").innerHTML = "Minecraft" + live.mc;
+       // document.getElementById("streams2").innerHTML = "" + live.gta;
+        document.getElementById("streams3").innerHTML = "" + live.lol;
+        document.getElementById("streams4").innerHTML = "" + live.pub;
+        document.getElementById("streams5").innerHTML = "" + live.forti;
+        document.getElementById("streams6").innerHTML = "" + live.zzz;
+        
+
+        
+
+
+        function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+        
+
+
+
+    </script>
+
+</body>
+</html>
